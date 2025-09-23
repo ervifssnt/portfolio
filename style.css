@@ -317,3 +317,15 @@ footer {
     font-size: 1.8rem;
   }
 }
+
+.about-section p {
+  margin-bottom: 30px; /* Adds space below the text */
+}
+
+.about-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 10px;
+}
+
