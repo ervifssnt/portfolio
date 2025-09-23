@@ -1,77 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erviano Florentino Susanto - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Navigation -->
   <nav>
-    <div class="logo">Know more about me<span>.</span></div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="container nav-container">
+      <h2 class="logo">Erviano<span>.</span></h2>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Hello, I’m <span>Erviano Florentino Susanto</span></h1>
-    <h2>Cybersecurity Undergraduate</h2>
-    <p>
-      Cyber Security student passionate about penetration testing, 
-      CTF challenges, and secure software development. 
-      I enjoy solving problems at the intersection of technology and security.
-    </p>
-
-    <!-- Social Links -->
-    <div class="social-links">
-      <a href="https://github.com/ervifssnt" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/erviano-susanto-647490386/" target="_blank">LinkedIn</a>
-      <a href="cv.pdf" target="_blank">CV</a>
+  <header class="hero">
+    <div class="container hero-container">
+      <img src="profile.jpg" alt="Profile Logo" class="profile-img">
+      <h1>Hello, I’m <span class="highlight">Erviano Florentino Susanto</span></h1>
+      <h2>Cybersecurity Undergraduate</h2>
+      <p>
+        Cyber Security student passionate about penetration testing, CTF challenges, 
+        and secure software development. I enjoy solving problems at the intersection 
+        of technology and security.
+      </p>
+      <div class="links">
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="CV.pdf" target="_blank">CV</a>
+      </div>
     </div>
-
-    <!-- Buttons -->
-    <div class="buttons">
-      <a href="#contact" class="btn primary">Hire Me</a>
-      <a href="#contact" class="btn secondary">Contact</a>
-    </div>
-  </section>
+  </header>
 
   <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I specialize in web security, vulnerability assessment, and secure coding. 
-      Currently building hands-on projects to apply best practices in cybersecurity 
-      and demonstrate practical knowledge.
-    </p>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I specialize in web security, vulnerability assessment, and secure coding. 
+        Currently building hands-on projects to apply best practices in cybersecurity 
+        and demonstrate practical knowledge.
+      </p>
+      <div class="skills">
+        <div class="skill">🛡️ Penetration Testing</div>
+        <div class="skill">💻 Secure Coding</div>
+        <div class="skill">⌨️ CTF Challenges</div>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="projects/contact-form/index.php">Secure Contact Form (PHP)</a></li>
-      <li><a href="projects/secure-login/index.php">Secure Login System</a></li>
-      <li><a href="projects/xss-demo/index.php">XSS Demo</a></li>
-      <li><a href="projects/sql-demo/index.php">SQL Injection Demo</a></li>
-    </ul>
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Vulnerability Scanner</h3>
+          <p>A Python-based tool for scanning common web vulnerabilities.</p>
+          <a href="https://github.com/" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>CTF Writeups</h3>
+          <p>Documentation of Capture The Flag challenges I solved.</p>
+          <a href="https://github.com/" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Secure Login System</h3>
+          <p>A demo web app with secure authentication and hashing practices.</p>
+          <a href="https://github.com/" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:susantoerviano@gmail.com">susantoerviano@gmail.com</a></p>
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>If you’d like to collaborate or just say hi, feel free to reach out!</p>
+      <div class="contact-links">
+        <a href="mailto:susantoerviano@gmail.com">📧 susantoerviano@gmail.com</a>
+        <a href="https://linkedin.com/" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/" target="_blank">💻 GitHub</a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Erviano Florentino Susanto.</p>
+    <p>© 2025 Erviano Florentino Susanto | Cybersecurity Portfolio</p>
   </footer>
 </body>
 </html>
