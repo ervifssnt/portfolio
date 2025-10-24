@@ -32,6 +32,126 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- Animated Blob Profile Photo Styles -->
+    <style>
+        /* Blob Container */
+        .blob-container {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Animated Blob Image */
+        .blob-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            overflow: hidden;
+            animation: morph 8s ease-in-out infinite, float 6s ease-in-out infinite;
+            box-shadow:
+                0 0 40px rgba(139, 127, 255, 0.4),
+                0 0 80px rgba(139, 127, 255, 0.2),
+                0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(139, 127, 255, 0.5);
+        }
+
+        /* Purple Glow Background Effect */
+        .blob-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #8B7FFF, #6C5CE7, #A29BFE);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.3;
+            filter: blur(20px);
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        /* Profile Image Inside Blob */
+        .blob-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        /* Floating Animation - Smooth up and down movement */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) scale(1);
+            }
+            50% {
+                transform: translateY(-20px) scale(1.02);
+            }
+        }
+
+        /* Blob Morphing Animation - Organic shape changes */
+        @keyframes morph {
+            0%, 100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+            25% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+            50% {
+                border-radius: 70% 30% 50% 50% / 30% 50% 50% 70%;
+            }
+            75% {
+                border-radius: 40% 70% 60% 30% / 70% 50% 40% 60%;
+            }
+        }
+
+        /* Optional: Add hover effect for interactivity */
+        .blob-image:hover {
+            animation-play-state: paused;
+            box-shadow:
+                0 0 60px rgba(139, 127, 255, 0.6),
+                0 0 100px rgba(139, 127, 255, 0.3),
+                0 15px 50px rgba(0, 0, 0, 0.4);
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .blob-container {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .blob-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .blob-image {
+                box-shadow:
+                    0 0 30px rgba(139, 127, 255, 0.4),
+                    0 0 60px rgba(139, 127, 255, 0.2),
+                    0 8px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            @keyframes float {
+                0%, 100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-15px);
+                }
+            }
+        }
+    </style>
 </head>
 <body>
     <!--  Preloader Start  -->
@@ -101,15 +221,24 @@
         <section class="d2c_hero_wrapper" id="home">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-12 col-lg-10 offset-lg-1 text-center wow fadeInLeft">
+                    <!-- Animated Blob Profile Photo -->
+                    <div class="col-md-12 col-lg-5 d-flex justify-content-center mb-4 mb-lg-0 wow fadeInLeft">
+                        <div class="blob-container">
+                            <div class="blob-image">
+                                <img src="./assets/images/My-image.jpg" alt="Erviano Susanto - Cybersecurity Professional">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Text Content -->
+                    <div class="col-md-12 col-lg-7 text-center text-lg-start wow fadeInRight">
                         <h4 class="mb-2">Hello I'm</h4>
                         <h1 class="text-white mb-xl-3 mb-lg-2">Erviano Florentino <span>Susanto</span></h1>
                         <h5>Aspiring Penetration Tester & Security Analyst</h5>
-                        <p class="px-0 px-md-5">Aspiring cybersecurity professional with hands-on experience in penetration testing, secure web development, and vulnerability assessment. I combine offensive security skills from CTF competitions and Hack The Box with defensive programming practices to identify and remediate security gaps. Currently seeking internship opportunities to apply my technical skills in pentesting, security analysis, or GRC while contributing to real-world security initiatives.</p>
+                        <p class="pe-0 pe-lg-5">Aspiring cybersecurity professional with hands-on experience in penetration testing, secure web development, and vulnerability assessment. I combine offensive security skills from CTF competitions and Hack The Box with defensive programming practices to identify and remediate security gaps. Currently seeking internship opportunities to apply my technical skills in pentesting, security analysis, or GRC while contributing to real-world security initiatives.</p>
                         <a href="#project" class="btn">View My Projects</a>
                         <a href="#about" class="btn d2c_secondary_btn ms-4">Learn more</a>
                     </div>
-                    <!-- Hero image removed for cleaner professional look -->
                 </div>
             </div>
         </section>
