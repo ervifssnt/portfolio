@@ -1,0 +1,16 @@
+# Claude Code documentation
+CLAUDE.md
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local settings
+.claude/settings.local.json
